@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+       
+         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <title></title>
+
+<script type="text/javascript">
+
+            
+            $(document).ready(function(){
+
+                 $( "#cancel").click(function() {
+                    location.reload();
+                });
+
+
+                    //randon number generation
+                    function random()
+                    {
+                            var x = document.getElementById("demo");
+                            var y =Math.floor((Math.random() * 900) + 100);
+                            //x.innerHTML = y;
+                            //var y= 1;
+                            var params ={type:"check",random1:y};
+
+
+                            $.ajax({
+                            url:"http://articlesjustforyou.com/random.php",
+                            type:"GET",
+                            dataType:"json",
+                            data:params,
+                            ContentType:"application/json",
+                            success:function(data){
+                                //window.location.href = "search.html";
+                                //alert("data :" + JSON.stringify(data));
+
+                                var data1 = JSON.stringify(data);
+                                //alert(data1);
+                                var pusheddata = $.parseJSON(data1);
+                                if (pusheddata == null) {
+
+                                    x.innerHTML = y;
+
+                                                                }
+                                else
+                                {
+                                    random();
+
+                                } 
+                                                                                    
+                            },
+                            error:function(err){
+                                //alert(JSON.stringify(err));
+                            },
+
+                            complete: function()
+                            {
+                              //window.location.href = "search.html";
+
+                            }  
+
+                        });
+                            
+                    
+                     }// end of random function
+
+                    random();
+                    $("#search").click(function(event){     
+                    location.href="search.html";
+                });
+
+
+                $("#btnregister").click(function(){
+
+
+                    //var a = $("#myform input[type='radio']:checked").val();
+                    var myRadio = $('input[name=radio-choice]');
+                    var a = myRadio.filter(':checked').val();
+                    var id = $("#demo").text();
+                    //alert(id);
+                    var params ={type:"add",uid:id, name:$("#name").val(), email:$("#email").val(), age:$("#slider").val(), gender:a, mobile:$("#mobile").val(), disease:$("#des").val(), prescription:$("#pre").val()  };
+                    //alert(JSON.stringify(params));
+
+                    $.ajax({
+                        url:"http://articlesjustforyou.com/adddetails.php",
+                        type:"GET",
+                        dataType:"json",
+                        data:params,
+                        ContentType:"application/json",
+                        success:function(response){
+                            window.location.href = "search.html";
+                            //alert("response :" + JSON.stringify(response));
+                        },
+                        error:function(err){
+                            alert("Details added successfully");
+                            location.reload();
+                        },
+
+                        complete: function()
+                        {
+                          //window.location.href = "search.html";
+                          //location.reload();
+                        }  
+
+                    });
+
+                });
+            }); 
+
+       
+
+        </script>
+<!--new code modify 15/15 -->
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+        
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+
+
+                
+			});
+		</script>
+		
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+		
+		<!--extra added by me -->
+		    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+		
+	
+<!-- 15/12 end -->
+
+    </head>
+   
+    <body>
+	<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="home.html"><img src="images/logo.png" title="doctor" height="65px"; /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<!--<li class="active"><a href="#home" class="scroll">Home </a></li>-->
+								<!--<li><a href="#about" class="scroll">About us</a></li>-->
+								<!--<li><a href="#services" class="scroll">Functionality</a></li>-->
+								<!--<li><a href="#team" class="scroll">our team</a></li>-->
+								<!--<li><a href="#contact" class="scroll">Contact</a></li>-->
+							</ul>
+							<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clear"> </div>
+					</div>
+				</div>
+			</div> 
+            <div data-role="page">
+
+                <div data-role="header">
+                    <h4>Acolyte</h4>
+                </div><!-- /header -->
+
+<form>
+  <div class="form-group">
+                <div role="main" class="ui-content">
+                   <form action="#" method="get">
+                    
+
+                        <div data-role="fieldcontain">
+                         <label for="name">Unique ID:</label>
+                         <!-- <button type="submit" data-theme="a" id="btnSubmit" onclick= "authenticate()">Get uid</button> -->
+                         <label id="demo"></label>
+                        </div>            
+
+
+
+                        <div data-role="fieldcontain">
+                         <label for="name">Name:</label>
+                         <input type="text" class="form-control" name="name" id="name" value=""  />
+                        </div>
+
+                        <div data-role="fieldcontain">
+                         <label for="email">Email:</label>
+                         <input type="text" class="form-control" name="name" id="email" value=""  />
+                        </div>
+
+                        
+
+                             
+
+                        <div data-role="fieldcontain">
+                            <label for="slider">Age:</label>
+                            <input type="range"  class="form-control"  name="slider" id="slider" value="20" min="0" max="100" data-highlight="true"  />
+                        </div>
+
+                        
+
+                        
+
+                        <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <legend>Gender:</legend>
+                                    <input type="radio" name="radio-choice" id="radio-choice-1" value="Male" checked="checked" />
+                                    <label for="radio-choice-1">Male</label>
+
+                                    <input type="radio" name="radio-choice" id="radio-choice-2" value="Female"  />
+                                    <label for="radio-choice-2">Female</label>
+
+                            </fieldset>
+                        </div>
+
+                        <div data-role="fieldcontain">
+                         <label for="email">Mobile Nos:</label>
+                         <input type="text" class="form-control" name="mobile" id="mobile" value=""  />
+                        </div>    
+
+
+                       
+
+                        <div data-role="fieldcontain">
+                        <label for="disease">Disease:</label>
+                        <input type="text"  class="form-control" id="des" placeholder="Sart type 'a' ....">
+                      </div>
+
+
+                       
+
+                        <div data-role="fieldcontain">
+                        <label for="textarea">Prescription:</label>
+                        <textarea cols="40" class="form-control" rows="8" name="pre" id="pre"></textarea>
+                        </div>
+                                  
+
+                        
+                        <div class="ui-body ui-body-b">
+                        <fieldset class="ui-grid-a">
+                                <div class="ui-block-a"><button type="submit" class="btn btn-default" data-theme="d" id="cancel">Cancel</button></div>
+                                <div class="ui-block-b"><button type="submit" class="btn btn-default" data-theme="a" id ="btnregister">Submit</button></div>
+                               <center><div class="ui-block-b"><button  class="btn btn-default" data-theme="a" id ="search">Search Patient</button></center></div>
+                               
+                        </fieldset>
+                        </div>
+                        
+                    </form>
+                
+
+                </div><!-- /content -->
+</div>
+</form>
+                <div data-role="footer">
+                    <h4>Page Footer</h4>
+                </div><!-- /footer -->
+            </div><!-- /page -->
+
+
+
+    </body>
+</html>

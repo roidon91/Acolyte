@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="roi.com.aco" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-intent href="market:*" />
+    <splash density="land-hdpi" src="banner1.png" />
+    <splash density="land-ldpi" src="banner1.png" />
+    <splash density="land-mdpi" src="banner1.png" />
+    <splash density="land-xhdpi" src="banner1.png" />
+    <splash density="port-hdpi" src="banner1.png" />
+    <splash density="port-ldpi" src="banner1.png" />
+    <splash density="port-mdpi" src="banner1.png" />
+    <splash density="port-xhdpi" src="banner1.png" />
+    <icon density="ldpi" src="banner1.png" />
+    <icon density="mdpi" src="banner1.png" />
+    <icon density="hdpi" src="banner1.png" />
+    <icon density="xhdpi" src="banner1.png" />
+    <name>test</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="log in.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

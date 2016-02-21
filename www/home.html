@@ -1,0 +1,401 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home : Acolyte</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="The free Easier Iphone web template, Andriod web template, Smartphone web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		 <!-- Custom Theme files -->
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		 <!---- start-smoth-scrolling---->
+		<!----webfonts--->
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!---//webfonts--->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+		
+		<!--extra added by me -->
+		    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-slider.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<!----- start-header---->
+			 <div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+						<div class="logo">
+							<a href="#"><img src="images/logo.png" title="doctor" height="65px"; /></a>
+						</div>
+						<!----start-top-nav---->
+						 <nav class="top-nav">
+							<ul class="top-nav">
+								<li class="active"><a href="#home" class="scroll">Home </a></li>
+								<!--<li><a href="#about" class="scroll">About us</a></li>-->
+								<li><a href="#services" class="scroll">Functionality</a></li>
+								<!--<li><a href="#team" class="scroll">our team</a></li>-->
+								<!--<li><a href="#contact" class="scroll">Contact</a></li>-->
+							</ul>
+							<a href="#" id="pull"><img src="images/menu-icon.png" title="menu" /></a>
+						</nav>
+						<div class="clear"> </div>
+					</div>
+				</div>
+			</div> 
+		<!----- //End-header---->
+		<!--<!----start-slider-script---->
+			 <!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+			<li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+			<li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./slider/add details.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2 >Add patients details</h2>
+					<h5>Makes the tedious job simpler.. Saves paper, just a phone and you have it all.</h5>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./slider/broadcast.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Broadcast</h2>
+					<p>Encountered something unusual? Alert the doctors.</p>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./slider/analysis.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Analysis</h2>
+					<p>To analyze the trends of diseases and find a solution. Helps for R&D</p>
+                </div>
+            </div>
+			<div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./slider/forum.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Forum</h2>
+					<p>Any questions?? Discuss with doctors across the globe..</p>
+                </div>
+            </div>
+			<div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./slider/dictionary.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Dictionary</h2>
+					<p>Know the disease in depth.. Read more abt it.. Enhance your knowledge.</p>
+                </div>
+            </div>
+			<div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('./slider/delectable.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Delectables</h2>
+					<p>Give yourself some timeout & refresh..</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+			<!----- //End-slider----> 
+			<!---- about ---->
+			<!--<div id="about" class="about">
+				<div class="container">
+					<div class="header about-header text-center">
+						<h2>about us</h2>
+						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+					</div>
+					<!---- About-grids ---->
+					<!--<div class="about-grids">
+						<div class="col-md-4">
+							<div class="about-grid">
+								<img src="images/img1.jpg" title="name" />
+								<span class="t-icon1"> </span>
+								<div class="about-grid-info text-center">
+									<h3><a href="#">Children's specialist</a></h3>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="about-grid n-about-grid n-about-grid1">
+								<img src="images/img2.jpg" title="name" />
+								<span class="t-icon1"> </span>
+								<div class="about-grid-info text-center">
+									<h3><a href="#">Women's specialist</a></h3>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="about-grid n-about-grid n-about-grid2">
+								<img src="images/img3.jpg" title="name" />
+								<span class="t-icon2"> </span>
+								<div class="about-grid-info text-center">
+									<h3><a href="#">men's specialist</a></h3>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+								</div>
+							</div>
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<!---- About-grids ---->
+				</div>
+				
+			</div>
+			<!---- about ---->
+			<!--- services --->
+			<div id="services" class="services">
+				<div class="container">
+					<div class="header services-header text-center">
+						<h2>Functionality</h2>
+						<p></p>
+					</div>
+					<!---- service-grids--->
+					<div class="service-grids">
+						<div class="col-md-4">
+							<div class="service-grid text-center">
+								<a href="patient login.html"><span class="s1-icon"> </span></a>
+								<h3><a href="patient login.html">Patient details</a></h3>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid text-center">
+								<a href="broadcast.html"><span class="s2-icon"> </span></a>
+								<h3><a href="broadcast.html">broadcast</a></h3>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid text-center">
+								<a href="analysis.html"><span class="s3-icon"> </span></a>
+								<h3><a href="analysis.html">analysis</a></h3>
+							</div>
+						</div>
+								<!-- demo-->
+								<div class="col-md-4">
+							<div class="service-grid1 text-center">
+								<a href="http://acolyte.createaforum.com/"><span class="s1-icon"> </span></a>
+								<h3><a href="http://acolyte.createaforum.com/">forum</a></h3>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid1 text-center">
+								<a href="dictionary.html"><span class="s2-icon"> </span></a>
+								<h3><a href="dictionary.html">dictionary</a></h3>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid1 text-center">
+								<a href="delectables.html"><span class="s3-icon"> </span></a>
+								<h3><a href="delectables.html">delectables</a></h3>
+							</div>
+	</div>
+<!--demo end-->								
+						</div>
+						<div class="clear"> </div>
+					</div>
+					
+					<!--demo example-->
+										<!--<div class="service-grids">
+						<div class="col-md-4">
+							<div class="service-grid1 text-center">
+								<a href="#"><span class="s1-icon"> </span></a>
+								<h3><a href="#">forum</a></h3>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid1 text-center">
+								<a href="#"><span class="s2-icon"> </span></a>
+								<h3><a href="#">dictionary</a></h3>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="service-grid1 text-center">
+								<a href="#"><span class="s3-icon"> </span></a>
+								<h3><a href="#">delectables</a></h3>
+							</div>
+						</div>
+					
+						<div class="clear"> </div>
+					</div>
+					<!----//service-grids--->
+				</div>
+				</div>
+			
+			<!--- services --->
+			<!--- team --->
+			<!--<div id="team" class="team">
+				<div class="container">
+					<div class="header team-head text-center">
+						<h2>our team</h2>
+						<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
+					</div>
+					<!--- teammember-grids ---->
+					<!--<div class="team-member-grids">
+						<div class="team-member-grid">
+							<img src="images/t1.jpg" title="name" />
+							<div class="team-member-info bottom-t-info">
+								<span> </span>
+								<h3><a href="#">Dr. Keith M. Weiner, M.D.</a></h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type Lorem Ipsum is simply dummy text.is simply dummy text..is simply dummy text.</p>
+							</div>
+						</div>
+						<div class="team-member-grid">
+							<div class="team-member-info bottom-t-info bottom-t-info-b">
+								<span> </span>
+								<h3><a href="#">Dr. Danielle, M.D.</a></h3>
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type Lorem Ipsum is simply dummy text.is simply dummy text..is simply dummy text..is simply dummy text.</p>
+							</div>
+							<img src="images/t2.jpg" title="name" />
+						</div>
+						<div class="clear"> </div>
+					</div>
+					<!---//teammember-grids ---->
+				</div>
+			</div>
+			<!--- team --->
+			<!---- contact ---->
+			<!--<div id="contact" class="contact">
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1600186.2619317076!2d-102.69625001610805!3d38.43306521805143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1404490159176" > </iframe>
+					<div class="contact-info">
+						<div class="container">
+						<!---- contact-grids ---->
+						<!--<div class="contact-grids">
+							<h3>contact us</h3>
+							<div class="col-md-5 contact-grid-left">
+								<h4>contact information</h4>
+								<ul>
+									<li><span class="cal"> </span><label>Monday - Friday :</label><small>9:30 AM to 6:30 PM</small></li>
+									<li><span class="pin"> </span><label>Address :</label><small>123 Some Street , London, UK, CP 123</small></li>
+									<li><span class="phone"> </span><label>Phone :</label><small>(032) 987-1235</small></li>
+									<li><span class="fax"> </span><label>Fax :</label><small>(123) 984-1234</small></li>
+									<li><span class="mail"> </span><label>Email :</label><small> info@doctor.com</small></li>
+								</ul>
+							</div>
+							<div class="col-md-7 contact-grid-right">
+								<h4>leave us a message</h4>
+								<form>
+									<input type="text" value="Name:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name:';}">
+									<input type="text" value="Email:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email:';}">
+									<input type="text" value="Phone No:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone No:';}">
+									<textarea rows="2" cols="70" onfocus="if(this.value == 'Message:') this.value='';" onblur="if(this.value == '') this.value='Message:';">Message:</textarea>
+									<input type="submit" value="SEND MESSAGE" />
+								</form>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<!---- contact-grids ---->
+					</div>
+					</div>
+				</div>
+			</div>
+			<!---- contact ---->
+			<div class="clear"> </div>
+			<!--- copy-right ---->
+			<div class="copy-right">
+				<div class="container">
+				<div class="copy-right-left">
+					<p> <a href="#http://w3layouts.com/">Acolyte</a></p>
+					<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				</div>
+				<!--<div class="copy-right-right">
+					<ul>
+						<li><a class="facebook" href="#"><span> </span></a></li>
+						<li><a class="twitter" href="#"><span> </span></a></li>
+						<li><a class="skype" href="#"><span> </span></a></li>
+						<div class="clear"> </div>
+					</ul>
+				</div>-->
+				<div class="clear"> </div>
+			</div>
+			</div>
+			<!--- copy-right ---->
+			<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+	</body>
+</html>
+

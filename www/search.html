@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+        <script type="text/javascript" src="cordova.js"></script>
+        
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+        
+
+        <title></title>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $( "#reset" ).click(function() {
+         location.reload();
+});
+
+                $("#search1").click(function(){
+
+                    //var databox = document.getElementById("databox");
+                    
+                    var params ={type:"search", uid:$("#search").val()};
+                    //alert(JSON.stringify(params));
+
+                    $.ajax({
+                        url:"http://yourdomain/search.php",
+                        type:"GET",
+                        dataType:"json",
+                        data:params,
+                        ContentType:"application/json",
+
+                       
+                        
+                        error:function(err){
+                            //alert(JSON.stringify(err));
+                        },
+                        success:function(data){
+                               var data1 = JSON.stringify(data);
+                                //alert(data1);
+                                var pusheddata = $.parseJSON(data1);
+                                var htmldata = "";
+
+                                $.each(pusheddata, function(i, serverData){
+                                  htmldata = htmldata +'<li>'+'<br /> '+'<strong>Name:</strong>'+ serverData.name+'<br /> '+'<strong>Email:</strong>'+serverData.email+'<br />'+'<strong>Age:</strong>'+serverData.age +'<br />'+'<strong>Gender:</strong>'+serverData.gender+'<br />'+'<strong>Mobile:</strong>'+serverData.mobile+'<br />'+'<strong>Disease:</strong>'+serverData.disease+'<br />'+'<strong>Prescription:</strong>'+serverData.description+'</li>'  +'<br>';  
+                                                                     
+                               });
+                                    
+                                    $('#show-list').append(htmldata).listview('refresh');
+                                    //$('#two').append(htmldata1).listview('refresh');
+
+
+
+                        }//end of success
+                       });//end of ajax
+
+                });
+            }); 
+             
+</script>
+ </head>
+    
+    <body>
+                   
+                       
+ <div data-role="page" id="one">
+
+    <div data-role="header">
+        <h1>Search Patient</h1>
+    </div><!-- /header -->
+
+    <div data-role="content" >  
+        <div data-role="fieldcontain">
+                         <label for="email">Search:</label>
+                         <input type="text" name="name" id="search" value=""  />
+                        </div>
+
+                        
+                         <div>
+                            <ol id="show-list" data-role="listview"></ol>
+                         </div><br />
+                         
+     
+                        <!--<div class="ui-block-b"><button type="submit" data-theme="a" id ="search1">Search</button><span>  </span>
+                        <button type="submit" data-theme="a" id ="reset">Reset</button>    
+                        </div>--> 
+
+
+                        <div class="ui-body ui-body-b">
+                        <fieldset class="ui-grid-a">
+                                <div class="ui-block-a"><button type="submit" data-theme="a" id ="search1" class="ui-btn ui-icon-search ui-btn-icon-left">Search</button></div>
+                                <div class="ui-block-b"><button type="submit" data-theme="a" id ="reset" data-icon="refresh">Reset
+                                </button></div>
+                        </fieldset>
+                        </div>
+
+                         
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-theme="d">
+        <h4>Acolyte</h4>
+    </div><!-- /footer -->
+</div><!-- /page one -->                      
+
+  
+
+                    
+
+    </body>
+</html>

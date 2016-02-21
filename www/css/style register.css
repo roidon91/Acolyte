@@ -1,0 +1,17 @@
+body{
+
+	font-family: 'PT Sans Narrow', sans-serif;
+	 background: url(../slider/transparent.png) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+	 
+}
+.container{
+	width:90%;
+	margin:0 auto;
+	color:#42A5F5;
+
+}

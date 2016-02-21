@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="roi.com.aco" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>test</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="log in.html" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="android">
+        <!-- you can use any density that exists in the Android project -->
+        <splash src="banner1.png" density="land-hdpi"/>
+        <splash src="banner1.png" density="land-ldpi"/>
+        <splash src="banner1.png" density="land-mdpi"/>
+        <splash src="banner1.png" density="land-xhdpi"/>
+
+        <splash src="banner1.png" density="port-hdpi"/>
+        <splash src="banner1.png" density="port-ldpi"/>
+        <splash src="banner1.png" density="port-mdpi"/>
+        <splash src="banner1.png" density="port-xhdpi"/>
+    </platform>
+    <platform name="android">
+          <icon src="banner1.png" density="ldpi" />
+          <icon src="banner1.png" density="mdpi" />
+          <icon src="banner1.png" density="hdpi" />
+          <icon src="banner1.png" density="xhdpi" />
+     </platform>
+	
+
+
+
+</widget>
